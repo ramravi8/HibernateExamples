@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+ <hibernate-mapping>
+ <class name ="com.hibernate.pog.Person" table = "Person">
+ 	<id name="id">
+ 		<generator class="assigned"/> 
+	 </id> 
+ 	<property name="name" column="name" type="string" length ="20"/>
+ 	
+ 	<component name="permanentAddress">
+ 	<property name="street" column="p_street"/>
+ 	<property name="city" column="p_city"/>
+ 	<property name="state" column="p_state"/>
+ 	<property name="country" column="p_country"/>
+ 	</component>
+ 	
+ 	<component name ="currentAddress">
+ 		<property name="street" column="c_street"/>
+ 		<property name="city" column="c_city"/>
+ 		<property name="state" column="c_state"/>
+ 		<property name="country" column="c_country"/>
+ 	</component>
+  </class>
+ 
+ </hibernate-mapping> 
