@@ -38,8 +38,8 @@ public class MismatchORM
 		
 		session.beginTransaction();
 		
-		// If person not exist then update in database.
-		if(session.get(Person.class,110)!=null)
+		// If person record not exist then added it in database.
+		if(session.get(Person.class,110)==null)
 		{
 			session.save(p);
 			session.getTransaction().commit();
