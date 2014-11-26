@@ -1,4 +1,4 @@
 HibernateExamples
 =================
 
-Practising Hibernate Examples
+These are practice Hibernate Examples
